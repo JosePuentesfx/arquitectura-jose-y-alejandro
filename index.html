@@ -3,75 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Qué es la Arquitectura?</title>
+    <title>Arquitectura y Arquitectura de Software</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --bg-light: #f4f7f6;
+            --bg-white: #ffffff;
+            --border-color: #ecf0f1;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 2em;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-color);
         }
+
         .container {
-            max-width: 800px;
-            margin: auto;
-            background: #f9f9f9;
-            padding: 2em;
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: var(--bg-white);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        h1, h2 {
-            color: #333;
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            margin: -20px -20px 20px -20px; /* Adjust to fit container */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            font-size: 2em;
+            font-weight: 700;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
         ul {
             list-style-type: none;
             padding: 0;
         }
-        li {
-            margin-bottom: 0.5em;
+
+        ul li {
+            background-color: var(--bg-light);
+            margin-bottom: 10px;
+            padding: 12px 15px;
+            border-left: 5px solid var(--primary-color);
+            border-radius: 4px;
+            transition: transform 0.2s ease-in-out;
+            font-size: 1.05em;
+        }
+
+        ul li:hover {
+            transform: translateX(5px);
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--secondary-color);
+            font-size: 0.9em;
+        }
+
+        .section-intro {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 30px;
+            font-size: 1.15em;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 15px;
+            background-color: #fcf3f2;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        blockquote {
+            background: #f9f9f9;
+            border-left: 10px solid #ccc;
+            margin: 1.5em 10px;
+            padding: 0.5em 10px;
+            quotes: "\201C""\201D""\2018""\2019";
+        }
+        blockquote:before {
+            color: #ccc;
+            content: open-quote;
+            font-size: 4em;
+            line-height: 0.1em;
+            margin-right: 0.25em;
+            vertical-align: -0.4em;
+        }
+        blockquote p {
+            display: inline;
         }
     </style>
 </head>
 <body>
-
     <div class="container">
-        <h1>¿Qué es la Arquitectura?</h1>
-        <p>
-            La <strong>arquitectura</strong> es mucho más que simplemente construir edificios. En su sentido más amplio, se refiere al arte y la ciencia de diseñar, planificar y construir estructuras. Sin embargo, su significado se extiende a la organización, la estructura y el diseño de cualquier sistema complejo, ya sea físico o conceptual. La arquitectura busca equilibrar la función, la forma, la estética y la viabilidad técnica para crear soluciones que sean tanto prácticas como significativas.
-        </p>
+        <header>
+            <h1>Arquitectura: De los Cimientos al Código</h1>
+            <p>Una exploración de la arquitectura en la construcción y el software</p>
+        </header>
 
-        ---
+        <section>
+            <h2>¿Qué es la Arquitectura?</h2>
+            <p class="section-intro">
+                En su esencia más pura, la arquitectura es la ciencia y el arte de diseñar y construir. Es la disciplina que da forma a nuestro entorno físico, desde una silla hasta una ciudad entera. Pero, ¿qué implica realmente?
+            </p>
+            <p>
+                La arquitectura, en un sentido amplio, se refiere a la estructura fundamental y organizativa de un sistema, ya sea físico o conceptual. Implica el diseño de los componentes, sus interrelaciones, y los principios que guían su diseño y evolución a lo largo del tiempo. No se trata solo de la apariencia externa, sino de la organización interna, la funcionalidad, la estabilidad y la estética que permiten que algo sea útil y duradero.
+            </p>
+            <p>
+                Desde la antigüedad, la humanidad ha buscado construir con propósito, considerando no solo la función sino también la belleza y la durabilidad. Un arquitecto tradicional planifica un edificio teniendo en cuenta la resistencia de los materiales, la distribución de espacios, la circulación, la luz natural, la eficiencia energética y el impacto estético y cultural. Es un equilibrio complejo entre arte, ingeniería y visión.
+            </p>
+            <blockquote>
+                <p>"La arquitectura es el juego sabio, correcto y magnífico de los volúmenes reunidos bajo la luz."</p>
+                <footer>— Le Corbusier</footer>
+            </blockquote>
+        </section>
 
-        <h2>Arquitectura de Software</h2>
-        <p>
-            La <strong>arquitectura de software</strong> es la estructura fundamental de un sistema de software y las disciplinas para crear tales estructuras y sistemas. Se trata de la organización y el diseño de los componentes principales de un sistema, sus relaciones entre sí y el entorno. La arquitectura de software no se enfoca en los detalles de la codificación, sino en las decisiones de alto nivel que afectan la calidad del sistema, como la escalabilidad, la mantenibilidad, la seguridad y el rendimiento. 
+        <section>
+            <h2>¿Qué es la Arquitectura de Software?</h2>
+            <p class="section-intro">
+                Cuando trasladamos estos principios al mundo digital, emerge un concepto igualmente crucial: la arquitectura de software. Es el esqueleto invisible que soporta cada aplicación y sistema que usamos hoy.
+            </p>
+            <p>
+                La arquitectura de software es el conjunto de decisiones más significativas sobre la organización de un sistema de software. Esto incluye la selección de elementos estructurales y sus interfaces por los que el sistema está compuesto, junto con sus comportamientos especificados en colaboraciones, y la composición de estos elementos estructurales y de comportamiento en subsistemas cada vez más grandes.
+            </p>
+            <h3>Componentes Clave:</h3>
+            <ul>
+                <li><strong>Elementos Estructurales:</strong> Cómo se divide el sistema en componentes (módulos, capas, servicios, microservicios, etc.).</li>
+                <li><strong>Relaciones e Interacciones:</strong> Cómo estos componentes se comunican y colaboran entre sí.</li>
+                <li><strong>Principios y Directrices:</strong> Las reglas y restricciones que guían el diseño, como patrones arquitectónicos (MVC, cliente-servidor, capas, etc.), principios de diseño (SOLID, DRY), estándares de seguridad, escalabilidad, rendimiento y mantenibilidad.</li>
+                <li><strong>Decisiones Fundamentales:</strong> Elección de tecnologías, frameworks y plataformas.</li>
+            </ul>
+            <p>
+                Un arquitecto de software no escribe necesariamente todo el código, sino que diseña el mapa y la estructura general, asegurándose de que el sistema sea robusto, escalable, mantenible y cumpla con los requisitos no funcionales del negocio. Una buena arquitectura de software puede prevenir problemas costosos a largo plazo, mientras que una deficiente puede llevar a un sistema frágil y difícil de evolucionar.
+            </p>
+            <blockquote>
+                <p>"La arquitectura es la disciplina que permite a los equipos de desarrollo crear software con un alto grado de calidad y bajo costo durante un largo período de tiempo."</p>
+                <footer>— Robert C. Martin (Uncle Bob)</footer>
+            </blockquote>
+        </section>
 
-[Image of a microservices architecture diagram]
+        <section>
+            <h2>Conclusión</h2>
+            <p>
+                Tanto la arquitectura tradicional como la de software comparten un propósito fundamental: construir estructuras sólidas, funcionales y duraderas. Ambas requieren visión, planificación meticulosa y una profunda comprensión de los principios subyacentes. Aunque una trabaja con ladrillos y acero, y la otra con código y datos, ambas son el arte y la ciencia de la organización para un propósito.
+            </p>
+        </section>
 
-        </p>
-        <p>
-            Algunos de los aspectos clave de la arquitectura de software incluyen:
-        </p>
-        <ul>
-            <li><strong>Componentes:</strong> Las partes funcionales del sistema.</li>
-            <li><strong>Conectores:</strong> Los mecanismos que permiten la comunicación entre los componentes.</li>
-            <li><strong>Patrones de diseño:</strong> Soluciones reutilizables a problemas comunes.</li>
-            <li><strong>Estilos arquitectónicos:</strong> Un conjunto de principios de diseño y reglas para organizar un sistema, como la arquitectura de microservicios, la arquitectura monolítica o la arquitectura de capas.</li>
-        </ul>
+        <section>
+            <h2>Bibliografía</h2>
+            <p>Para profundizar en estos temas, se recomiendan las siguientes fuentes:</p>
+            <ul>
+                <li>
+                    Bass, L., Clements, P., & Kazman, R. (2012). <strong>Software Architecture in Practice</strong> (3rd ed.). Addison-Wesley Professional.
+                    <p><em>Este libro es una referencia fundamental sobre la arquitectura de software, cubriendo sus conceptos, patrones y prácticas.</em></p>
+                </li>
+                <li>
+                    Martin, R. C. (2017). <strong>Clean Architecture: A Craftsman's Guide to Software Structure and Design</strong>. Prentice Hall.
+                    <p><em>Robert C. Martin (Uncle Bob) presenta principios atemporales de diseño de software aplicables a cualquier arquitectura.</em></p>
+                </li>
+                <li>
+                    Gamma, E., Helm, R., Johnson, R., & Vlissides, J. (1994). <strong>Design Patterns: Elements of Reusable Object-Oriented Software</strong>. Addison-Wesley.
+                    <p><em>Aunque enfocado en patrones de diseño, este libro es esencial para entender la composición de los componentes de software.</em></p>
+                </li>
+                <li>
+                    Le Corbusier. (1923). <strong>Vers une architecture (Hacia una arquitectura)</strong>.
+                    <p><em>Un texto clásico de la arquitectura moderna que explora los principios fundamentales del diseño arquitectónico.</em></p>
+                </li>
+            </ul>
+        </section>
 
-        ---
-
-        <h2>Bibliografía</h2>
-        <p>
-            Para una comprensión más profunda, puedes consultar las siguientes fuentes:
-        </p>
-        <ul>
-            <li>
-                Bass, L., Clements, P., & Kazman, R. (2012). <strong>Software Architecture in Practice</strong> (3rd ed.). Addison-Wesley Professional.
-            </li>
-            <li>
-                Clements, P., Bachmann, F., Bass, L., Garlan, D., Ivers, J., Little, R., Merson, P., Nord, R., & Wood, W. (2010). <strong>Documenting Software Architectures: Views and Beyond</strong> (2nd ed.). Addison-Wesley Professional.
-            </li>
-        </ul>
+        <footer>
+            <p>&copy; 2023 Información sobre Arquitectura. Todos los derechos reservados.</p>
+        </footer>
     </div>
-
 </body>
+</html>
 </html>
